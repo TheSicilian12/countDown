@@ -26,7 +26,7 @@
     <div id="timer"></div>
 
     <script>
-        // christmas
+        // year
         let todayYear = new Date().getFullYear();
 
         // static federal holidays
@@ -37,11 +37,8 @@
         let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
         let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
 
-        let getDay = new Date().getDay();
-
         // static special days
         let flagDay = new Date("Jun 14, " + todayYear +" 00:00:00").getTime();
-
 
         let whatDay = 'Christmas'
 
@@ -82,7 +79,7 @@
             let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
             let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-            document.getElementById("timer").innerHTML = getDay + ' ' + days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
+            document.getElementById("timer").innerHTML = jan + ' ' + days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
 
             if (timeDif < 0) {
                 clearInterval(x);
@@ -95,3 +92,4 @@
 </body>
 
 </html>
+<!-- https://date.nager.at/Api -->
