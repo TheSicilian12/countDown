@@ -11,7 +11,6 @@
             text-align: center;
             margin-top: 50px;
             border: 1px solid black;
-            height: 10px;
         }
     </style>
 </head>
@@ -19,29 +18,41 @@
 <body>
     <p id="christmasDay">Christmas</p>
     <p id="newYearsEve">New Year's Eve</p>
+    <div id="day">Christmas</div>
     <div id="timer"></div>
 
     <script>
         // christmas
         let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
         let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
+        let whatDay = 'Christmas'
 
         let timerDate = christmasDay;
 
         document.getElementById('christmasDay').addEventListener('click', function () {
             timerDate = christmasDay;
+            whatDay = 'Christmas';
         })
 
         document.getElementById('newYearsEve').addEventListener('click', function () {
             timerDate = newYearsEve;
+            whatDay = "New Year's Eve";
         })
+
 
         // timer changes
         let x = setInterval(function () {
+            document.getElementById('day').innerHTML = whatDay;
+
             let now = new Date().getTime();
             let timeDif = timerDate - now;
 
-            document.getElementById("timer").innerHTML = timeDif;
+            let days = Math.floor(timeDif / (1000 * 60 * 60 * 24))
+            let hours = Math.floor(timeDif % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
+            let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
+
+            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
 
             if (timeDif < 0) {
                 clearInterval(x);
