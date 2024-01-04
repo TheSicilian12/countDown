@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Count Down</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+            $(function () {
+                $("#includeHtml").load("christmas.html");
+            });
+        </script>
     <style>
         #timer {
             font-size: 40px;
@@ -16,6 +22,8 @@
 </head>
 
 <body>
+    <div id="includeHtml" class="center"></div>
+
     <p id="christmasDay">Christmas</p>
     <p id="newYearsEve">New Year's Eve</p>
     <p id="juneteenthDay">Juneteenth</p>
