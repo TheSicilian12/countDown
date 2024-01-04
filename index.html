@@ -12,6 +12,9 @@
             margin-top: 50px;
             border: 1px solid black;
         }
+        #christmasInfo {
+            display: none;
+        }
     </style>
 </head>
 
@@ -24,6 +27,8 @@
 
     <div id="day">Christmas</div>
     <div id="timer"></div>
+
+    <p id="christmasInfo">All about Christmas</p>
 
     <script>
         // year
@@ -47,6 +52,7 @@
         document.getElementById('christmasDay').addEventListener('click', function () {
             timerDate = christmasDay;
             whatDay = 'Christmas';
+            document.getElementById('christmasInfo').style.display = 'block';
         })
 
         document.getElementById('newYearsEve').addEventListener('click', function () {
@@ -79,7 +85,7 @@
             let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
             let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-            document.getElementById("timer").innerHTML = jan + ' ' + days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
+            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
 
             if (timeDif < 0) {
                 clearInterval(x);
