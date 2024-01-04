@@ -18,6 +18,10 @@
 <body>
     <p id="christmasDay">Christmas</p>
     <p id="newYearsEve">New Year's Eve</p>
+    <p id="juneteenthDay">Juneteenth</p>
+    <p id="independenceDay">Independence Day</p>
+    <p id="veteransDay">Veteran's Day</p>
+
     <div id="day">Christmas</div>
     <div id="timer"></div>
 
@@ -30,8 +34,8 @@
         let juneteenthDay = new Date("Jun 19, " + todayYear +" 00:00:00").getTime();
         let independenceDay = new Date("Jul 4, " + todayYear +" 00:00:00").getTime();
         let verteransDay = new Date("Nov 11, " + todayYear +" 00:00:00").getTime();
-        let christmasDay = new Date("Dec 12, " + todayYear + " 00:00:00").getTime();
-        let newYearsEve = new Date("Dec 31, " + todayYear +" 00:00:00").getTime();
+        let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
+        let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
 
         // static special days
         let flagDay = new Date("Jun 14, " + todayYear +" 00:00:00").getTime();
@@ -49,6 +53,18 @@
         document.getElementById('newYearsEve').addEventListener('click', function () {
             timerDate = newYearsEve;
             whatDay = "New Year's Eve";
+        })
+        document.getElementById('juneteenthDay').addEventListener('click', function () {
+            timerDate = juneteenthDay;
+            whatDay = "Juneteenth";
+        })
+        document.getElementById('independenceDay').addEventListener('click', function () {
+            timerDate = independenceDay;
+            whatDay = "Independence Day";
+        })
+        document.getElementById('veteransDay').addEventListener('click', function () {
+            timerDate = verteransDay;
+            whatDay = "Veteran's Day";
         })
 
 
