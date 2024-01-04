@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Count Down</title>
     <style>
         #timer {
-          font-size: 40px;
-          text-align: center;
-          margin-top: 50px;
-          border: 1px solid black;
-          height: 10px;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 50px;
+            border: 1px solid black;
+            height: 10px;
         }
-      </style>
+    </style>
 </head>
+
 <body>
     <p>Count Down</p>
     <div id="timer"></div>
 
+    <script>
+        // christmas
+        let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
+
+        // timer changes
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+            let timeDif = christmasDay - now;
+
+            document.getElementById("timer").innerHTML = timeDif;
+
+            if (timeDif < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+
+        }, 1000);
+    </script>
 
 </body>
+
 </html>
