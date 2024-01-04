@@ -17,17 +17,29 @@
 </head>
 
 <body>
-    <p>Count Down</p>
+    <p id="christmasDay">Christmas</p>
+    <p id="newYearsEve">New Year's Eve</p>
     <div id="timer"></div>
 
     <script>
         // christmas
         let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
+        let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
+
+        let timerDate = christmasDay;
+
+        document.getElementById('christmasDay').addEventListener('click', function () {
+            timerDate = christmasDay;
+        })
+
+        document.getElementById('newYearsEve').addEventListener('click', function () {
+            timerDate = newYearsEve;
+        })
 
         // timer changes
         let x = setInterval(function () {
             let now = new Date().getTime();
-            let timeDif = christmasDay - now;
+            let timeDif = timerDate - now;
 
             document.getElementById("timer").innerHTML = timeDif;
 
