@@ -12,9 +12,6 @@
             margin-top: 50px;
             border: 1px solid black;
         }
-        #christmasInfo {
-            display: none;
-        }
     </style>
 </head>
 
@@ -28,48 +25,43 @@
     <div id="day">Christmas</div>
     <div id="timer"></div>
 
-    <p id="christmasInfo">All about Christmas</p>
-
     <script>
         // year
         let todayYear = new Date().getFullYear();
 
         // static federal holidays
-        let newYearsDay = new Date("Jan 1, " + todayYear + 1 +" 00:00:00").getTime();
-        let juneteenthDay = new Date("Jun 19, " + todayYear +" 00:00:00").getTime();
-        let independenceDay = new Date("Jul 4, " + todayYear +" 00:00:00").getTime();
-        let verteransDay = new Date("Nov 11, " + todayYear +" 00:00:00").getTime();
-        let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
-        let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
+        holidayObj = {
+            'christmasDay': [new Date("Dec 25, " + todayYear + " 00:00:00").getTime(), 'Christmas'],
+            'newYearsDay': [new Date("Jan 1, " + todayYear + 1 +" 00:00:00").getTime(), "New Year's Day"],
+            'juneteenthDay': [new Date("Jun 19, " + todayYear +" 00:00:00").getTime(), 'Juneteenth'],
+            'independenceDay': [new Date("Jul 4, " + todayYear +" 00:00:00").getTime(), 'Independence Day'],
+            'veteransDay': [new Date("Nov 11, " + todayYear +" 00:00:00").getTime(), "Veteran's Day"],
+            'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
+        }
 
-        // static special days
-        let flagDay = new Date("Jun 14, " + todayYear +" 00:00:00").getTime();
-
+        let timerDate = holidayObj['christmasDay'][0];
         let whatDay = 'Christmas'
 
-        let timerDate = christmasDay;
+        function handleHolidayClick(holiday) {
+            timerDate = holidayObj[holiday][0];
+            whatDay = holidayObj[holiday][1];
+        }
 
         document.getElementById('christmasDay').addEventListener('click', function () {
-            timerDate = christmasDay;
-            whatDay = 'Christmas';
-            document.getElementById('christmasInfo').style.display = 'block';
+            handleHolidayClick('christmasDay');
         })
 
         document.getElementById('newYearsEve').addEventListener('click', function () {
-            timerDate = newYearsEve;
-            whatDay = "New Year's Eve";
+            handleHolidayClick('newYearsEve');
         })
         document.getElementById('juneteenthDay').addEventListener('click', function () {
-            timerDate = juneteenthDay;
-            whatDay = "Juneteenth";
+            handleHolidayClick('juneteenthDay');
         })
         document.getElementById('independenceDay').addEventListener('click', function () {
-            timerDate = independenceDay;
-            whatDay = "Independence Day";
+            handleHolidayClick('independenceDay');
         })
         document.getElementById('veteransDay').addEventListener('click', function () {
-            timerDate = verteransDay;
-            whatDay = "Veteran's Day";
+            handleHolidayClick('veteransDay');
         })
 
 
