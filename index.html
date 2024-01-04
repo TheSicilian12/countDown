@@ -23,8 +23,13 @@
 
     <script>
         // christmas
-        let christmasDay = new Date("Dec 12, 2024 00:00:00").getTime();
-        let newYearsEve = new Date("Dec 31, 2024 00:00:00").getTime();
+        let todayYear = new Date().getFullYear();
+
+        let christmasDay = new Date("Dec 12, " + todayYear + " 00:00:00").getTime();
+        let newYearsEve = new Date("Dec 31, " + todayYear +" 00:00:00").getTime();
+
+
+        
         let whatDay = 'Christmas'
 
         let timerDate = christmasDay;
