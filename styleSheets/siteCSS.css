@@ -21,15 +21,15 @@ body {
 
 .countdown {
     margin: 0;
-    font-size: calc(1rem + 3vw); /* Initial font size using vw */
+    font-size: calc(1rem + 3vw);
 }
 
 .until {
     margin: 0px;
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
 }
 
 .holiday-txt {
     margin: 0px;
-    font-size: 2.9rem;
+    font-size: calc(1rem + 2vw);
 }
