@@ -7,6 +7,7 @@
     <title>Christmas</title>
     <link rel="stylesheet" href="../styleSheets/siteCSS.css">
 
+    <script src="../timer.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
         $(function () {
@@ -25,9 +26,27 @@
         <div id="navHtml"></div>
         <p>Christmas</p>
         <p id="timerHtml"></p>
+        <p id="time">hello</p>
     </div>
 
     <script>
+        document.getElementById('time').innerHTML = timer('christmas');
+        function startTimer() {
+            let x = setInterval(function () {
+                // let time = timer('newYearsEve');
+                document.getElementById('time').innerHTML = timer('christmas');
+
+                if (timeDif < 0) {
+                    clearInterval(x);
+                    timerElement.innerHTML = "EXPIRED";
+                } else {
+                    timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+                }
+            }, 1000);
+        }
+
+        startTimer();
+
         function setHolidayName(name) {
             localStorage.setItem('holidayName', 'christmas');
             $("#timerHtml").load("timer.html");

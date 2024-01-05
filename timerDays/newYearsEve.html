@@ -28,21 +28,21 @@
     <script>
 
     document.getElementById('time').innerHTML = timer('newYearsEve');
-        // function startTimer() {
-        //     let x = setInterval(function () {
-        //         // let time = timer('newYearsEve');
-        //         document.getElementById('time').innerHTML = timer('newYearsEve');
+        function startTimer() {
+            let x = setInterval(function () {
+                // let time = timer('newYearsEve');
+                document.getElementById('time').innerHTML = timer('newYearsEve');
 
-        //         if (timeDif < 0) {
-        //             clearInterval(x);
-        //             timerElement.innerHTML = "EXPIRED";
-        //         } else {
-        //             timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
-        //         }
-        //     }, 1000);
-        // }
+                if (timeDif < 0) {
+                    clearInterval(x);
+                    timerElement.innerHTML = "EXPIRED";
+                } else {
+                    timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+                }
+            }, 1000);
+        }
 
-        // startTimer();
+        startTimer();
 
         // let time = timer();
         // document.getElementById('time').innerHTML = time;
