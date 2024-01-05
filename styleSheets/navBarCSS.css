@@ -17,6 +17,12 @@
     margin: 1.5px 10px;
 }
 
+.nav-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
 .dropdown {
     display: none;
     top: 100%;
@@ -24,6 +30,8 @@
     background: rgb(123, 123, 194);
     z-index: 1000;
 }
+
+/* Select .dropdown when .hamburgerContainer is hovered */
 .hamburgerContainer:hover + .dropdown {
     display: block;
 }
