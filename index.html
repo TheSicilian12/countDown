@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Count Down</title>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script>
-            $(function () {
-                $("#includeHtml").load("christmas.html");
-            });
-        </script>
+    <script>
+        $(function () {
+            $("#timerHtml").load("timer.html");
+        });
+    </script>
     <style>
         #timer {
             font-size: 40px;
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="includeHtml" class="center"></div>
+    <div id="timerHtml" class="center"></div>
 
     <p id="christmasDay">Christmas</p>
     <p id="newYearsEve">New Year's Eve</p>
@@ -40,10 +40,10 @@
         // static federal holidays
         holidayObj = {
             'christmasDay': [new Date("Dec 25, " + todayYear + " 00:00:00").getTime(), 'Christmas'],
-            'newYearsDay': [new Date("Jan 1, " + todayYear + 1 +" 00:00:00").getTime(), "New Year's Day"],
-            'juneteenthDay': [new Date("Jun 19, " + todayYear +" 00:00:00").getTime(), 'Juneteenth'],
-            'independenceDay': [new Date("Jul 4, " + todayYear +" 00:00:00").getTime(), 'Independence Day'],
-            'veteransDay': [new Date("Nov 11, " + todayYear +" 00:00:00").getTime(), "Veteran's Day"],
+            'newYearsDay': [new Date("Jan 1, " + todayYear + 1 + " 00:00:00").getTime(), "New Year's Day"],
+            'juneteenthDay': [new Date("Jun 19, " + todayYear + " 00:00:00").getTime(), 'Juneteenth'],
+            'independenceDay': [new Date("Jul 4, " + todayYear + " 00:00:00").getTime(), 'Independence Day'],
+            'veteransDay': [new Date("Nov 11, " + todayYear + " 00:00:00").getTime(), "Veteran's Day"],
             'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
         }
 
@@ -53,7 +53,26 @@
         function handleHolidayClick(holiday) {
             timerDate = holidayObj[holiday][0];
             whatDay = holidayObj[holiday][1];
+            setHolidayName(whatDay);
         }
+
+        function setHolidayName(name) {
+            localStorage.setItem('holidayName', name);
+            $("#timerHtml").load("timer.html");
+        }
+
+        function setFutureDate(date) {
+            localStorage.setItem('futureDate', date);
+            $("#timerHtml").load("timer.html");
+        }
+
+        $(function () {
+            // Set the data in localStorage
+            localStorage.setItem('holidayName', whatDay);
+            localStorage.setItem('futureDate', timerDate);
+            $("#timerHtml").load("timer.html");
+        });
+
 
         document.getElementById('christmasDay').addEventListener('click', function () {
             handleHolidayClick('christmasDay');
@@ -85,7 +104,7 @@
             let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
             let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' +  minutes + ' minutes ' + seconds + ' seconds';
+            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 
             if (timeDif < 0) {
                 clearInterval(x);
@@ -93,6 +112,8 @@
             }
 
         }, 1000);
+
+
     </script>
 
 </body>
