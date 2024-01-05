@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,32 @@
             $("#navHtml").load("navBar.html");
         });
     </script>
+    <script>
+        $(function () {
+            $("#timerHtml").load("timer.html");
+        });
+    </script>
 </head>
+
 <body>
     <div class="border-green">
         <div id="navHtml"></div>
         <p>Christmas</p>
+        <p id="timerHtml"></p>
     </div>
+
+    <script>
+        function setHolidayName(name) {
+            localStorage.setItem('holidayName', 'Christmas');
+            $("#timerHtml").load("timer.html");
+        }
+
+        $(function () {
+            // Set the data in localStorage
+            localStorage.setItem('holidayName', 'Christmas!');
+            $("#timerHtml").load("timer.html");
+        });
+    </script>
 </body>
+
 </html>

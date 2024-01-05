@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>timmer</title>
 </head>
 <body>
     <p id="customMessage"></p>
-    <p id="futureDate"></p>
-    <p id="timerPage"></p>
 
     <script>
       function updateHoliday() {
             const name = localStorage.getItem('holidayName');
-            const date = localStorage.getItem('futureDate');
             if (name) {
                 document.getElementById('customMessage').innerText = name;
-                document.getElementById('futureDate').innerHTML = date;
             }
         }
 
