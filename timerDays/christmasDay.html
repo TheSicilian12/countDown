@@ -27,20 +27,7 @@
         let holiday = 'christmas'
 
         document.getElementById('time').innerHTML = timer(holiday);
-        function startTimer() {
-            let x = setInterval(function () {
-                let time = timer(holiday)
-
-                if (time < 0) {
-                    clearInterval(x);
-                    document.getElementById('time').innerHTML = "EXPIRED";
-                } else {
-                    document.getElementById('time').innerHTML = time;
-                }
-            }, 1000);
-        }
-
-        startTimer();
+        startTimer(holiday);
     </script>
 </body>
 
