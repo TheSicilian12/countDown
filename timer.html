@@ -20,7 +20,8 @@
             'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
         }
 
-        let timerDate = holidayObj['christmas'][0];
+        let holidayName = localStorage.getItem('holidayName');
+        let timerDate = holidayObj[holidayName][0];
 
         // timer changes
         let x = setInterval(function () {
