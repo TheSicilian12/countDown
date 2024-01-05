@@ -12,7 +12,6 @@
     <script>
         $(function () {
             $("#navHtml").load("../navBar.html");
-            $("#timerHtml").load("../timer.html");
         });
     </script>
 </head>
@@ -21,23 +20,22 @@
     <div class="border-green">
         <div id="navHtml"></div>
         <p>New Year's Eve</p>
-        <p id="timerHtml"></p>
-        <p id="time">hello</p>
+        <p id="time">Drum Roll Please...</p>
     </div>
 
     <script>
 
-    document.getElementById('time').innerHTML = timer('newYearsEve');
+        document.getElementById('time').innerHTML = timer('newYearsEve');
         function startTimer() {
             let x = setInterval(function () {
-                // let time = timer('newYearsEve');
-                document.getElementById('time').innerHTML = timer('newYearsEve');
+                let time = timer('newYearsEve')
 
-                if (timeDif < 0) {
+                if (time < 0) {
                     clearInterval(x);
-                    timerElement.innerHTML = "EXPIRED";
+                    // timerElement.innerHTML = "EXPIRED";
+                    document.getElementById('time').innerHTML = "EXPIRED";
                 } else {
-                    timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+                    document.getElementById('time').innerHTML = time;
                 }
             }, 1000);
         }
