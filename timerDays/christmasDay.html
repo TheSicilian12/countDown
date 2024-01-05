@@ -31,7 +31,6 @@
 
                 if (time < 0) {
                     clearInterval(x);
-                    // timerElement.innerHTML = "EXPIRED";
                     document.getElementById('time').innerHTML = "EXPIRED";
                 } else {
                     document.getElementById('time').innerHTML = time;
@@ -40,17 +39,6 @@
         }
 
         startTimer();
-
-        function setHolidayName(name) {
-            localStorage.setItem('holidayName', 'christmas');
-            $("#timerHtml").load("timer.html");
-        }
-
-        $(function () {
-            // Set the data in localStorage
-            localStorage.setItem('holidayName', 'christmas');
-            $("#timerHtml").load("timer.html");
-        });
     </script>
 </body>
 
