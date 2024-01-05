@@ -22,12 +22,30 @@
         <div id="navHtml"></div>
         <p>New Year's Eve</p>
         <p id="timerHtml"></p>
-        <p id="time"></p>
+        <p id="time">hello</p>
     </div>
 
     <script>
-        let time = timer();
-        document.getElementById('time').innerHTML = time;
+
+    document.getElementById('time').innerHTML = timer();
+        // function startTimer() {
+        //     let x = setInterval(function () {
+        //         // let time = timer('newYearsEve');
+        //         document.getElementById('time').innerHTML = timer('newYearsEve');
+
+        //         if (timeDif < 0) {
+        //             clearInterval(x);
+        //             timerElement.innerHTML = "EXPIRED";
+        //         } else {
+        //             timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+        //         }
+        //     }, 1000);
+        // }
+
+        // startTimer();
+
+        // let time = timer();
+        // document.getElementById('time').innerHTML = time;
 
         function setHolidayName(name) {
             localStorage.setItem('holidayName', 'newYearsEve');
