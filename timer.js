@@ -17,7 +17,7 @@ function timer(holiday) {
     let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
     let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-    let str = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds ';
+    let str = days + ' days ' + hours + ' hours ' + minutes + ' mins ' + seconds + ' secs ';
     return str
 };
 
