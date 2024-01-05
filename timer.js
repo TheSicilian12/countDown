@@ -20,3 +20,16 @@ function timer(holiday) {
     let str = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds ';
     return str
 };
+
+function startTimer(holiday) {
+    let x = setInterval(function () {
+        let time = timer(holiday)
+
+        if (time < 0) {
+            clearInterval(x);
+            document.getElementById('time').innerHTML = "EXPIRED";
+        } else {
+            document.getElementById('time').innerHTML = time;
+        }
+    }, 1000);
+}

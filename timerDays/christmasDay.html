@@ -24,10 +24,12 @@
     </div>
 
     <script>
-        document.getElementById('time').innerHTML = timer('newYearsEve');
+        let holiday = 'christmas'
+
+        document.getElementById('time').innerHTML = timer(holiday);
         function startTimer() {
             let x = setInterval(function () {
-                let time = timer('newYearsEve')
+                let time = timer(holiday)
 
                 if (time < 0) {
                     clearInterval(x);
