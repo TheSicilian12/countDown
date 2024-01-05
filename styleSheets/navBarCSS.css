@@ -23,9 +23,12 @@
     left: 0;
     background: rgb(123, 123, 194);
     z-index: 1000;
+    border: 1px solid black;
+    width: 100%;
 }
 
 /* Select .dropdown when .hamburgerContainer is hovered */
 .hamburgerContainer:hover + .dropdown {
-    display: block;
+    display: flex;
+    justify-content: space-around;
 }
