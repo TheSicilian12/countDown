@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="/styleSheets/siteCSS.css">
     <link rel="stylesheet" href="/styleSheets/navBarCSS.css">
 
+    <script>
+        function toggleDropdown() {
+            let dropdown = document.getElementById('dropdown');
+            dropdown.classList.toggle('show');
+        }
+    </script>
+
 </head>
 
 <body>
     <nav class="navBar-container">
-        <div class="hamburgerContainer">
+        <div class="hamburgerContainer" onClick="toggleDropdown()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
 
-        <div class="dropdown">
+        <div id='dropdown' class="dropdown">
             <a href="christmasDay.html" id="christmasDay">Christmas</a>
             <a href="newYearsEve.html" id="newYearsEve">New Year's Eve</a>
             <a href="christmasDay.html" id="juneteenthDay">Juneteenth</a>

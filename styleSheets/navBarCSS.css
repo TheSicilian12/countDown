@@ -27,8 +27,7 @@
     width: 100%;
 }
 
-/* Select .dropdown when .hamburgerContainer is hovered */
-.hamburgerContainer:hover + .dropdown {
+.show {
     display: flex;
     justify-content: space-around;
 }
