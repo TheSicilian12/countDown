@@ -3,47 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>timmer</title>
+    <title>Timer</title>
 </head>
 <body>
-    <p id="timer">Drum roll please...</p>
     <script>
-        window.onload = function() {
-        let todayYear = new Date().getFullYear();
+        function startTimer(timerDate) {
+            let x = setInterval(function () {
+                let now = Date.now();
+                let timeDif = timerDate - now;
 
-        holidayObj = {
-            'christmas': [new Date("Dec 25, " + todayYear + " 00:00:00").getTime(), 'Christmas'],
-            'newYearsDay': [new Date("Jan 1, " + todayYear + 1 + " 00:00:00").getTime(), "New Year's Day"],
-            'juneteenthDay': [new Date("Jun 19, " + todayYear + " 00:00:00").getTime(), 'Juneteenth'],
-            'independenceDay': [new Date("Jul 4, " + todayYear + " 00:00:00").getTime(), 'Independence Day'],
-            'veteransDay': [new Date("Nov 11, " + todayYear + " 00:00:00").getTime(), "Veteran's Day"],
-            'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
+                let days = Math.floor(timeDif / (1000 * 60 * 60 * 24))
+                let hours = Math.floor(timeDif % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+                let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
+                let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
+
+                let timerElement = document.getElementById("timer");
+                if (timeDif < 0) {
+                    clearInterval(x);
+                    timerElement.innerHTML = "EXPIRED";
+                } else {
+                    timerElement.innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+                }
+            }, 1000);
         }
 
-        let holidayName = localStorage.getItem('holidayName');
-        let timerDate = holidayObj[holidayName][0];
+        window.onload = function() {
+            let todayYear = new Date().getFullYear();
 
-        // timer changes
-        let x = setInterval(function () {
-            // document.getElementById('day').innerHTML = whatDay;
-
-            let now = new Date().getTime();
-            let timeDif = timerDate - now;
-
-            let days = Math.floor(timeDif / (1000 * 60 * 60 * 24))
-            let hours = Math.floor(timeDif % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-            let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
-            let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
-
-            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
-
-            if (timeDif < 0) {
-                clearInterval(x);
-                document.getElementById("timer").innerHTML = "EXPIRED";
+            let holidayObj = {
+                'christmas': [new Date("Dec 25, " + todayYear + " 00:00:00").getTime(), 'Christmas'],
+                'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
+                // Add other holiday dates...
             }
 
-        }, 1000);
-    };
+            let holidayName = localStorage.getItem('holidayName');
+            let timerDate = holidayObj[holidayName][0];
+
+            if (timerDate - Date.now() <= 0) {
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            } else {
+                startTimer(timerDate);
+            }
+        };
     </script>
+
+    <p id="timer">Drum roll please...</p>
 </body>
 </html>
