@@ -17,3 +17,18 @@ body {
     align-items: center;
     border: 1px solid black;
 }
+
+.countdown {
+    margin: 0px;
+    font-size: 3rem;
+}
+
+.until {
+    margin: 0px;
+    font-size: 2rem;
+}
+
+.holiday-txt {
+    margin: 0px;
+    font-size: 2.9rem;
+}
