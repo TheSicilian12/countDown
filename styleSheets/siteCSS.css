@@ -1,0 +1,8 @@
+.border {
+    border: 1px solid black;
+}
+
+.border-green {
+    border: 1px solid green;
+    background: lightblue
+}
