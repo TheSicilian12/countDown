@@ -8,6 +8,7 @@
 <body>
     <p id="customMessage"></p>
     <p id="futureDate"></p>
+    <p id="timerPage"></p>
 
     <script>
       function updateHoliday() {
@@ -28,6 +29,29 @@
                 updateHoliday(); // Update message when 'customMessage' changes
             }
         });
+
+
+
+        // timer changes
+        let x = setInterval(function () {
+            document.getElementById('day').innerHTML = whatDay;
+
+            let now = new Date().getTime();
+            let timeDif = timerDate - now;
+
+            let days = Math.floor(timeDif / (1000 * 60 * 60 * 24))
+            let hours = Math.floor(timeDif % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
+            let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
+
+            document.getElementById("timerPage").innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+
+            if (timeDif < 0) {
+                clearInterval(x);
+                document.getElementById("timerPage").innerHTML = "EXPIRED";
+            }
+
+        }, 1000);
     </script>
 </body>
 </html>

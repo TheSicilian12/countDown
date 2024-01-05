@@ -6,34 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Count Down</title>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script>
+    <!-- <script>
         $(function () {
             $("#timerHtml").load("timer.html");
         });
+    </script> -->
+    <script>
+        $(function () {
+            $("#navHtml").load("navBar.html");
+        });
     </script>
-    <style>
-        #timer {
-            font-size: 40px;
-            text-align: center;
-            margin-top: 50px;
-            border: 1px solid black;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="timerHtml" class="center"></div>
+     <!-- <div id="timerHtml" class="center"></div> -->
 
-    <p id="christmasDay">Christmas</p>
-    <p id="newYearsEve">New Year's Eve</p>
-    <p id="juneteenthDay">Juneteenth</p>
-    <p id="independenceDay">Independence Day</p>
-    <p id="veteransDay">Veteran's Day</p>
+   <div id="navHtml"></div>
 
-    <div id="day">Christmas</div>
-    <div id="timer"></div>
+    <!-- <div id="timer"></div> -->
 
-    <script>
+        <!--<script>
         // year
         let todayYear = new Date().getFullYear();
 
@@ -50,10 +42,21 @@
         let timerDate = holidayObj['christmasDay'][0];
         let whatDay = 'Christmas'
 
+        // function handleHolidayClick(holiday) {
+        //     timerDate = holidayObj[holiday][0];
+        //     whatDay = holidayObj[holiday][1];
+        //     setHolidayName(whatDay);
+        // }
         function handleHolidayClick(holiday) {
-            timerDate = holidayObj[holiday][0];
-            whatDay = holidayObj[holiday][1];
-            setHolidayName(whatDay);
+            let timerDate = holidayObj[holiday][0];
+            let whatDay = holidayObj[holiday][1];
+
+            // Set the data in localStorage
+            localStorage.setItem('holidayName', whatDay);
+            localStorage.setItem('futureDate', timerDate);
+
+            // Reload the timer.html after setting the data
+            $("#timerHtml").load("timer.html");
         }
 
         function setHolidayName(name) {
@@ -114,7 +117,7 @@
         }, 1000);
 
 
-    </script>
+    </script> -->
 
 </body>
 
