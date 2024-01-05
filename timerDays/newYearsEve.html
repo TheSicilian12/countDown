@@ -23,19 +23,19 @@
 <body>
     <div class="border-green">
         <div id="navHtml"></div>
-        <p>Christmas</p>
+        <p>New Year's Eve</p>
         <p id="timerHtml"></p>
     </div>
 
     <script>
         function setHolidayName(name) {
-            localStorage.setItem('holidayName', 'Christmas');
+            localStorage.setItem('holidayName', 'newYearsEve');
             $("#timerHtml").load("timer.html");
         }
 
         $(function () {
             // Set the data in localStorage
-            localStorage.setItem('holidayName', 'christmas');
+            localStorage.setItem('holidayName', 'newYearsEve');
             $("#timerHtml").load("timer.html");
         });
     </script>

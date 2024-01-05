@@ -6,25 +6,9 @@
     <title>timmer</title>
 </head>
 <body>
-    <p id="timer">timer</p>
-
+    <p id="timer">Drum roll please...</p>
     <script>
-    //   function updateHoliday() {
-    //         const name = localStorage.getItem('holidayName');
-    //         if (name) {
-    //             document.getElementById('customMessage').innerText = name;
-    //         }
-    //     }
-
-        // Initial update on load
-        // updateHoliday();
-
-        // Listen for changes in localStorage
-        // window.addEventListener('storage', function (e) {
-        //     if (e.key === 'holidayName') {
-        //         updateHoliday(); // Update message when 'customMessage' changes
-        //     }
-        // });
+        window.onload = function() {
         let todayYear = new Date().getFullYear();
 
         holidayObj = {
@@ -54,10 +38,11 @@
 
             if (timeDif < 0) {
                 clearInterval(x);
-                document.getElementById("timerPage").innerHTML = "EXPIRED";
+                document.getElementById("timer").innerHTML = "EXPIRED";
             }
 
         }, 1000);
+    };
     </script>
 </body>
 </html>
