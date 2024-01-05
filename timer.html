@@ -6,31 +6,41 @@
     <title>timmer</title>
 </head>
 <body>
-    <p id="customMessage"></p>
+    <p id="timer">timer</p>
 
     <script>
-      function updateHoliday() {
-            const name = localStorage.getItem('holidayName');
-            if (name) {
-                document.getElementById('customMessage').innerText = name;
-            }
-        }
+    //   function updateHoliday() {
+    //         const name = localStorage.getItem('holidayName');
+    //         if (name) {
+    //             document.getElementById('customMessage').innerText = name;
+    //         }
+    //     }
 
         // Initial update on load
-        updateHoliday();
+        // updateHoliday();
 
         // Listen for changes in localStorage
-        window.addEventListener('storage', function (e) {
-            if (e.key === 'holidayName') {
-                updateHoliday(); // Update message when 'customMessage' changes
-            }
-        });
+        // window.addEventListener('storage', function (e) {
+        //     if (e.key === 'holidayName') {
+        //         updateHoliday(); // Update message when 'customMessage' changes
+        //     }
+        // });
+        let todayYear = new Date().getFullYear();
 
+        holidayObj = {
+            'christmas': [new Date("Dec 25, " + todayYear + " 00:00:00").getTime(), 'Christmas'],
+            'newYearsDay': [new Date("Jan 1, " + todayYear + 1 + " 00:00:00").getTime(), "New Year's Day"],
+            'juneteenthDay': [new Date("Jun 19, " + todayYear + " 00:00:00").getTime(), 'Juneteenth'],
+            'independenceDay': [new Date("Jul 4, " + todayYear + " 00:00:00").getTime(), 'Independence Day'],
+            'veteransDay': [new Date("Nov 11, " + todayYear + " 00:00:00").getTime(), "Veteran's Day"],
+            'newYearsEve': [new Date("Dec 31, " + todayYear + " 00:00:00").getTime(), "New Year's Eve"],
+        }
 
+        let timerDate = holidayObj['christmas'][0];
 
         // timer changes
         let x = setInterval(function () {
-            document.getElementById('day').innerHTML = whatDay;
+            // document.getElementById('day').innerHTML = whatDay;
 
             let now = new Date().getTime();
             let timeDif = timerDate - now;
@@ -40,7 +50,7 @@
             let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
             let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-            document.getElementById("timerPage").innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
+            document.getElementById("timer").innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 
             if (timeDif < 0) {
                 clearInterval(x);
