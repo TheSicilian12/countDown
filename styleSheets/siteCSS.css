@@ -20,13 +20,8 @@ body {
 }
 
 .countdown {
-    margin: 0px;
-    font-size: calc(40px + 2vw); /* Initial font size based on viewport width */
-}
-@media screen and (max-width: 700px) {
-    .countdown {
-        font-size: calc(10px + 4vw); /* Font size shrinks proportionally to viewport width */
-    }
+    margin: 0;
+    font-size: calc(1rem + 3vw); /* Initial font size using vw */
 }
 
 .until {
