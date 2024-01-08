@@ -13,7 +13,6 @@
     height:15px;
     z-index: 100;
     border: 1px solid black;
-    border-radius: 5px;
     padding: 5px;
 }
 
@@ -38,10 +37,7 @@
     display: none;
     left: 0;
     z-index: 1000;
-
     border: 1px solid black;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     margin-top: 5px;
     width: 90%;
     height: 25px;
@@ -59,4 +55,14 @@
 
 .navBar-background {
     background: white;
+}
+
+.navBar-ham-radius-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.navBar-ham-radius-left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }

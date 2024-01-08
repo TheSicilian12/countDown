@@ -11,7 +11,9 @@
     <script>
         function toggleDropdown() {
             let dropdown = document.getElementById('dropdown');
+            let hamburger = document.getElementById('hamburger-menu');
             dropdown.classList.toggle('show');
+            hamburger.classList.toggle('navBar-ham-radius-left');
 
             let bar1 = document.getElementById('bar1');
             let bar2 = document.getElementById('bar2');
@@ -20,6 +22,8 @@
             bar1.classList.toggle('angleTop');
             bar2.classList.toggle('angle45');
             bar3.classList.toggle('angleBottom');
+
+
         }
     </script>
 
@@ -27,13 +31,13 @@
 
 <body>
     <nav class="navBar-container">
-        <div class="hamburger-menu navBar-background" onClick="toggleDropdown()">
+        <div id="hamburger-menu" class="hamburger-menu navBar-background navBar-ham-radius-right navBar-ham-radius-left" onClick="toggleDropdown()">
             <div id="bar1" class="bar1"></div>
             <div id="bar2" class="bar2"></div>
             <div id="bar3" class="bar3"></div>
         </div>
 
-        <div id='dropdown' class="dropdown navBar-background">
+        <div id='dropdown' class="dropdown navBar-background navBar-ham-radius-left">
             <a href="christmasDay.html" id="christmasDay">Christmas</a>
             <a href="newYearsEve.html" id="newYearsEve">New Year's Eve</a>
             <a href="christmasDay.html" id="juneteenthDay">Juneteenth</a>
