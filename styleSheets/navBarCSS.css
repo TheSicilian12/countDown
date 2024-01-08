@@ -36,13 +36,14 @@
 
 .dropdown {
     display: none;
-    top: 100%;
     left: 0;
     z-index: 1000;
 
     border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     margin-top: 5px;
-    width: 100%;
+    width: 90%;
     height: 25px;
 }
 .dropdown a {
