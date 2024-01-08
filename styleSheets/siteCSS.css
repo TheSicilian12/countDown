@@ -7,9 +7,9 @@ body {
 }
 
 .main-container {
-    border: 1px solid green;
-    background: lightblue;
     height: 100vh;
+    z-index: 20;
+    position: relative;
 }
 
 .time-container {
@@ -32,4 +32,10 @@ body {
 .holiday-txt {
     margin: 0px;
     font-size: calc(1rem + 2vw);
+}
+
+.holiday-background-img {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
 }
