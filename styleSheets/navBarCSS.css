@@ -14,7 +14,6 @@
     z-index: 100;
     border: 1px solid black;
     padding: 5px;
-    background: rgba(197, 178, 153, 0.966);
 }
 
 .bar1, .bar2, .bar3 {
@@ -45,4 +44,8 @@
 .show {
     display: flex;
     justify-content: space-around;
+}
+
+.navBar-background {
+    background: rgba(197, 178, 153, 0.966);
 }
