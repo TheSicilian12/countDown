@@ -11,6 +11,10 @@
     margin-right: 10px;
     width:15px;
     height:15px;
+    z-index: 100;
+    border: 1px solid black;
+    padding: 5px;
+    background: rgba(197, 178, 153, 0.966);
 }
 
 .bar1, .bar2, .bar3 {
