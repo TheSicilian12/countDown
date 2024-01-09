@@ -39,3 +39,8 @@ body {
     z-index: 1;
     position: absolute;
 }
+
+.overflow {
+    overflow: hidden;
+    height: 100vh;
+}
