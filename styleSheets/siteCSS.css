@@ -44,3 +44,7 @@ body {
     overflow: hidden;
     height: 100vh;
 }
+
+.christmas-font {
+    font-family: chopin;
+}
