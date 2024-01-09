@@ -10,13 +10,14 @@ body {
     height: 100vh;
     z-index: 20;
     position: relative;
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family:cursive;
 }
 
 .time-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .countdown {
@@ -43,8 +44,4 @@ body {
 .overflow {
     overflow: hidden;
     height: 100vh;
-}
-
-.christmas-font {
-    font-family: chopin;
 }
