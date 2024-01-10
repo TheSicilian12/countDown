@@ -1,6 +1,6 @@
 .navBar-container {
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
 }
 
 .hamburger-menu {
@@ -37,7 +37,7 @@
 .dropdown {
     display: flex;
     position: absolute;
-    left: 1000%; /* Initially off-screen to the left */
+    left: -6000%; /* Initially off-screen to the left */
     top: 0;
     z-index: 1000;
     border: 1px solid black;
@@ -45,7 +45,7 @@
     margin-top: 5px;
     width: 90%;
     height: 25px;
-    width: auto;
+    width: 100px;
     transition: left 1s ease-in-out; /* Apply transition for left property */
 }
 .dropdown a {
@@ -57,7 +57,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    left: -1000px;
+    left: 0px;
 }
 
 .navBar-background {
