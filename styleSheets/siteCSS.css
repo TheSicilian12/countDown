@@ -12,13 +12,11 @@ body {
     position: relative;
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family:cursive;
-    border: 1px solid black;
 }
 
 .flex-cen {
     display: flex;
     justify-content: center;
-    border: 10px solid green;
     height: 700px;
     align-items: center;
 }
@@ -69,7 +67,6 @@ body {
     height: 700px;
     z-index: 1;
     position: absolute;
-    border: 1px solid black;
 }
 
 .z-index-high {
