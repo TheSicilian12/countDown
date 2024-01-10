@@ -42,7 +42,15 @@ function startTimer(holiday) {
             clearInterval(x);
             document.getElementById('time').innerHTML = "EXPIRED";
         } else {
-            document.getElementById('time').innerHTML = time;
+            // document.getElementById('time').innerHTML = time;
+            document.getElementById('dayNum').innerHTML = time[0];
+            document.getElementById('dayUnit').innerHTML = time[1];
+            document.getElementById('hourNum').innerHTML = time[2];
+            document.getElementById('hourUnit').innerHTML = time[3];
+            document.getElementById('minNum').innerHTML = time[4];
+            document.getElementById('minUnit').innerHTML = time[5];
+            document.getElementById('secNum').innerHTML = time[6];
+            document.getElementById('secUnit').innerHTML = time[7];
         }
     }, 1000);
 }

@@ -37,9 +37,40 @@ body {
 }
 
 .countdown {
+    display: flex;
     margin: 0;
     font-size: calc(1rem + 3vw);
 }
+.countdown div {
+    display: flex;
+    width: auto;
+    margin-right: 10px;
+}
+.countdown div p {
+    margin-right: 10px;
+}
+
+.secNum {
+    display: flex;
+    justify-content: right;
+    width: calc(1rem + 5vw);
+}
+.minNum {
+    display: flex;
+    justify-content: right;
+    width: calc(1rem + 5vw);
+}
+.hourNum {
+    display: flex;
+    justify-content: right;
+    width: calc(1rem + 5vw);
+}
+.dayNum {
+    display: flex;
+    justify-content: right;
+    width: calc(1rem + 7vw);
+}
+
 
 .until {
     margin: 0px;
