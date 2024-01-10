@@ -37,7 +37,7 @@
 .dropdown {
     display: flex;
     position: absolute;
-    left: -100%; /* Initially off-screen to the left */
+    left: 1000%; /* Initially off-screen to the left */
     top: 0;
     z-index: 1000;
     border: 1px solid black;
@@ -56,7 +56,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    left: 5rem;
+    left: -1000px;
 }
 
 .navBar-background {
