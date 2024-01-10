@@ -44,10 +44,6 @@ body {
 .countdown div {
     display: flex;
     width: auto;
-    margin-right: 10px;
-}
-.countdown div p {
-    margin-right: 10px;
 }
 
 .secNum {
@@ -55,15 +51,35 @@ body {
     justify-content: right;
     width: calc(1rem + 5vw);
 }
+.secUnit {
+    display: flex;
+    justify-content: right;
+    width: calc(2rem + 7vw);
+}
 .minNum {
     display: flex;
     justify-content: right;
     width: calc(1rem + 5vw);
 }
+.minUnit {
+    display: flex;
+    justify-content: right;
+    width: calc(2rem + 7vw);
+}
 .hourNum {
     display: flex;
     justify-content: right;
     width: calc(1rem + 5vw);
+}
+.hourUnit {
+    display: flex;
+    justify-content: right;
+    width: calc(2rem + 9vw);
+}
+.dayUnit {
+    display: flex;
+    justify-content: right;
+    width: calc(2rem + 7vw);
 }
 .dayNum {
     display: flex;
