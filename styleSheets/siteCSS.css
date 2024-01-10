@@ -12,6 +12,7 @@ body {
     position: relative;
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family:cursive;
+    /* color: white; */
 }
 
 .flex-cen {
@@ -31,9 +32,13 @@ body {
     border-radius: 15px;
     width: 70vw;
     height: 40%;
-    background-color: rgba(240, 244, 255, 0.616);
-
     z-index: 10;
+
+    /* background-color: rgba(240, 244, 255, 0.616); */
+    background-image: url('../img/chalkboard.jpg');
+    background-size: cover;
+    background-position: 0px -240px;
+    /* background-position: center; */
 }
 
 .countdown {
