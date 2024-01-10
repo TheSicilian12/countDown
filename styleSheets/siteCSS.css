@@ -76,17 +76,17 @@ body {
 .hourUnit {
     display: flex;
     justify-content: right;
-    width: calc(2rem + 9vw);
-}
-.dayUnit {
-    display: flex;
-    justify-content: right;
     width: calc(2rem + 7vw);
 }
 .dayNum {
     display: flex;
     justify-content: right;
     width: calc(1rem + 7vw);
+}
+.dayUnit {
+    display: flex;
+    justify-content: right;
+    width: calc(2rem + 7vw);
 }
 
 
