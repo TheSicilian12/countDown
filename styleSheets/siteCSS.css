@@ -10,6 +10,8 @@ body {
     display: flex;
     justify-content: center;
     border: 1px solid black;
+    z-index: 1;
+    position: relative;
 }
 
 .main-container {
@@ -27,7 +29,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    margin-top: 15vh;
+    /* margin-top: 15vh; */
 
     border: 5px solid black;
     border-radius: 15px;
@@ -69,4 +71,9 @@ body {
     z-index: 1;
     position: absolute;
     border: 1px solid black;
+}
+
+.z-index-high {
+    z-index: 10;
+    position: relative;
 }
