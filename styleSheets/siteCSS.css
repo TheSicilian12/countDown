@@ -76,7 +76,7 @@ body {
 .hourUnit {
     display: flex;
     justify-content: right;
-    width: calc(2rem + 7vw);
+    width: calc(4rem + 7vw);
 }
 .dayNum {
     display: flex;
