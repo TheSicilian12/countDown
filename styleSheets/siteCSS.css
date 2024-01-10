@@ -38,9 +38,10 @@ body {
 
 .countdown {
     display: flex;
+    align-items: center;
     margin: 0;
+    height: 40%;
     font-size: calc(1rem + 3vw);
-    border: 1px solid black;
 }
 .countdown div {
     display: flex;
