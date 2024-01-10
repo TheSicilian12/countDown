@@ -28,17 +28,19 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 5px solid black;
+    border: 1px solid black;
     border-radius: 15px;
     width: 70vw;
     height: 40%;
     z-index: 10;
 
     /* background-color: rgba(240, 244, 255, 0.616); */
+    /* background-color: rgba(208, 218, 223, 0.603); */
     background-image: url('../img/chalkboard.jpg');
     background-size: cover;
     background-position: 0px -240px;
     /* background-position: center; */
+    /* background-blend-mode: color-burn; */
 }
 
 .countdown {
