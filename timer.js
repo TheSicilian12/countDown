@@ -17,8 +17,21 @@ function timer(holiday) {
     let minutes = Math.floor(timeDif % (1000 * 60 * 60) / (1000 * 60));
     let seconds = Math.floor(timeDif % (1000 * 60) / 1000);
 
-    let str = days + ' days ' + hours + ' hours ' + minutes + ' mins ' + seconds + ' secs ';
-    return str
+    let arr = [];
+
+    arr.push(days);
+    days === 1 ? arr.push('day') : arr.push('days');
+    arr.push(hours);
+    hours === 1 ? arr.push('hour') : arr.push('hours');
+    arr.push(minutes);
+    minutes === 1 ? arr.push('min') : arr.push('mins');
+    arr.push(seconds);
+    seconds === 1 ? arr.push('sec') : arr.push('secs');
+
+    return arr
+
+    // let str = days + ' days ' + hours + ' hours ' + minutes + ' mins ' + seconds + ' secs ';
+    // return str
 };
 
 function startTimer(holiday) {
