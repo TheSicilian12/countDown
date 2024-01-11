@@ -43,15 +43,15 @@
     display: flex;
     position: absolute;
 
-
+    align-items: center;
     z-index: 1000;
     border: 1px solid black;
     border-radius: 5px;
-
-    left: 20vw;
-
+    left: 50%;
+    transform: translateX(-50%);
     width: auto;
-    transition: left 1s ease-in-out; /* Apply transition for left property */
+    height: 25px;
+    transition: left 1s ease-in-out;
 }
 .dropdown a {
     text-decoration: none;
