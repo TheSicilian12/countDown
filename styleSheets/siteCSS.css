@@ -50,7 +50,7 @@ body {
     width: auto;
 }
 .countdown div p {
-    font-size: calc(105%);
+    font-size: calc(120%);
     /* font-weight: bold; */
 }
 
@@ -59,6 +59,8 @@ body {
     justify-content: right;
     width: calc(1rem + 6vw);
     margin-right: 0.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
 }
 .unit {
     display: flex;
@@ -70,6 +72,8 @@ body {
     justify-content: right;
     width: calc(1rem + 6vw);
     margin-right: 0.5rem;
+    margin-left: 1rem;
+    font-weight: bold;
 }
 .hourUnit {
     display: flex;
@@ -81,6 +85,7 @@ body {
     justify-content: right;
     width: calc(1rem + 8vw);
     margin-right: 0.5rem;
+    font-weight: bold;
 }
 .dayUnit {
     display: flex;
