@@ -1,6 +1,7 @@
 .navBar-container {
     display: flex;
     justify-content: right;
+    align-items: center;
     /* flex-direction: row-reverse; */
 }
 
@@ -41,21 +42,22 @@
 .dropdown {
     display: flex;
     position: absolute;
-    /* left: 0; */
-    right: 0;
-    top: 0;
+
+
     z-index: 1000;
     border: 1px solid black;
     border-radius: 5px;
-    margin-top: 5px;
-    width: 90%;
-    height: 25px;
+
+    left: 20vw;
+
     width: auto;
     transition: left 1s ease-in-out; /* Apply transition for left property */
 }
 .dropdown a {
     text-decoration: none;
     color: black;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .show {
