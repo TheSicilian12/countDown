@@ -11,6 +11,9 @@
     <script>
         function toggleDropdown() {
             let dropdown = document.getElementById('dropdown');
+
+            dropdown.classList.toggle('show');
+
             let bar1 = document.getElementById('bar1');
             let bar2 = document.getElementById('bar2');
             let bar3 = document.getElementById('bar3');
@@ -25,7 +28,7 @@
 </head>
 
 <body>
-    <nav class="navBar-container border">
+    <nav class="navBar-container">
         <div id="hamburger-menu" class="hamburger-menu navBar-background navBar-ham-radius-right navBar-ham-radius-left" onClick="toggleDropdown()">
             <div id="bar1" class="bar1"></div>
             <div id="bar2" class="bar2"></div>
