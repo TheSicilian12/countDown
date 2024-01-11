@@ -42,7 +42,7 @@ body {
     display: flex;
     align-items: center;
     margin: 0;
-    height: 40%;
+    height: 10%;
     font-size: calc(1rem + 3vw);
 }
 .countdown div {
@@ -65,7 +65,8 @@ body {
 .unit {
     display: flex;
     justify-content: left;
-    width: calc(3rem + 6vw);
+    font-size: calc(120%);
+    width: calc(3rem + 7vw);
 }
 .hourNum {
     display: flex;
@@ -95,13 +96,15 @@ body {
 
 
 .until {
-    margin: 0px;
+    margin: 2rem;
     font-size: calc(1rem + 1vw);
+    font-style: italic;
 }
 
 .holiday-txt {
-    margin: 0px;
-    font-size: calc(1rem + 2vw);
+    margin: -2rem;
+    font-size: calc(1rem + 3vw);
+    font-variant: small-caps;
 }
 
 .holiday-background-img {
