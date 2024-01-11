@@ -50,28 +50,39 @@ body {
     width: auto;
 }
 .countdown div p {
-    font-size: calc(150%);
+    font-size: calc(105%);
+    /* font-weight: bold; */
 }
 
 .num {
     display: flex;
     justify-content: right;
-    width: calc(1rem + 5vw);
+    width: calc(1rem + 6vw);
 }
 .unit {
     display: flex;
+    justify-content: left;
+    width: calc(3rem + 6vw);
+}
+.hourNum {
+    display: flex;
     justify-content: right;
-    width: calc(2rem + 7vw);
+    width: calc(1rem + 6vw);
+}
+.hourUnit {
+    display: flex;
+    justify-content: left;
+    width: calc(3rem + 8.5vw);
 }
 .dayNum {
     display: flex;
     justify-content: right;
-    width: calc(1rem + 7vw);
+    width: calc(1rem + 8vw);
 }
 .dayUnit {
     display: flex;
-    justify-content: right;
-    width: calc(2rem + 7vw);
+    justify-content: left;
+    width: calc(2rem + 7.5vw);
 }
 
 
