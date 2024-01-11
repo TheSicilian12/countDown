@@ -10,10 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 110vh;
     z-index: 20;
     position: relative;
-    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family:cursive;
     color: rgba(0, 0, 0, 0.829);
 }
@@ -23,8 +22,6 @@ body {
     justify-content: center;
     height: 700px;
     align-items: center;
-    /* z-index: 1;
-    position: absolute; */
 }
 
 .time-container {
@@ -33,29 +30,10 @@ body {
     align-items: center;
     justify-content: center;
 
-    /* border: 1px solid black; */
     border-radius: 15px;
     width: 70vw;
     height: 100%;
     z-index: 10;
-
-    /* background-color: rgba(209, 209, 209, 0.342); */
-    /* background-color: rgba(208, 218, 223, 0.603); */
-    /* background-image: url('../img/chalkboard.jpg'); */
-    background-size: cover;
-    background-position: 0px -240px;
-    /* background-position: center; */
-    /* background-blend-mode: color-burn; */
-}
-
-.countdown-background {
-    z-index: 15;
-    position: absolute;
-    width: 70vw;
-    height: 40%;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.247);
-    /* background-color: red; */
 }
 
 .countdown {
@@ -71,36 +49,19 @@ body {
     display: flex;
     width: auto;
 }
+.countdown div p {
+    font-size: calc(150%);
+}
 
-.secNum {
+.num {
     display: flex;
     justify-content: right;
     width: calc(1rem + 5vw);
 }
-.secUnit {
+.unit {
     display: flex;
     justify-content: right;
     width: calc(2rem + 7vw);
-}
-.minNum {
-    display: flex;
-    justify-content: right;
-    width: calc(1rem + 5vw);
-}
-.minUnit {
-    display: flex;
-    justify-content: right;
-    width: calc(2rem + 7vw);
-}
-.hourNum {
-    display: flex;
-    justify-content: right;
-    width: calc(1rem + 5vw);
-}
-.hourUnit {
-    display: flex;
-    justify-content: right;
-    width: calc(4rem + 7vw);
 }
 .dayNum {
     display: flex;
