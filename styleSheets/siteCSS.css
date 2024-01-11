@@ -12,7 +12,7 @@ body {
     position: relative;
     /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-family:cursive;
-    /* color: white; */
+    color: rgba(0, 0, 0, 0.829);
 }
 
 .flex-cen {
@@ -34,7 +34,7 @@ body {
     height: 40%;
     z-index: 10;
 
-    /* background-color: rgba(240, 244, 255, 0.616); */
+    /* background-color: rgba(209, 209, 209, 0.342); */
     /* background-color: rgba(208, 218, 223, 0.603); */
     background-image: url('../img/chalkboard.jpg');
     background-size: cover;
@@ -43,7 +43,19 @@ body {
     /* background-blend-mode: color-burn; */
 }
 
+.countdown-background {
+    z-index: 15;
+    position: absolute;
+    width: 70vw;
+    height: 40%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.247);
+    /* background-color: red; */
+}
+
 .countdown {
+    /* z-index: 20;
+    position: absolute; */
     display: flex;
     align-items: center;
     margin: 0;
