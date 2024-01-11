@@ -28,15 +28,15 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 15px;
     width: 70vw;
-    height: 40%;
+    height: 100%;
     z-index: 10;
 
     /* background-color: rgba(209, 209, 209, 0.342); */
     /* background-color: rgba(208, 218, 223, 0.603); */
-    background-image: url('../img/chalkboard.jpg');
+    /* background-image: url('../img/chalkboard.jpg'); */
     background-size: cover;
     background-position: 0px -240px;
     /* background-position: center; */
