@@ -7,9 +7,9 @@ body {
 }
 
 .main-container {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
     height: 100vh;
     z-index: 20;
     position: relative;
@@ -140,9 +140,4 @@ body {
     height: 700px;
     z-index: 1;
     position: absolute;
-}
-
-.z-index-high {
-    z-index: 100;
-    position:absolute;
 }

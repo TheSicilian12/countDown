@@ -45,7 +45,7 @@
     border: 1px solid black;
     border-radius: 5px;
     left: -100%;
-    width: 50%;
+    width: 80%;
     height: 25px;
     transition: left 1s ease-in-out;
 }
@@ -60,7 +60,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    left: 25%;
+    left: 10%;
     /* left: 50%; */
     /* transform: translateX(-50%); */
 }
@@ -77,4 +77,11 @@
 .navBar-ham-radius-left {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+}
+
+.nav-index {
+    z-index: 100;
+    position: absolute;
+    border: 1px solid black;
+    width: 90vw;
 }
