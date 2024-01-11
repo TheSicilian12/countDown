@@ -23,6 +23,8 @@ body {
     justify-content: center;
     height: 700px;
     align-items: center;
+    /* z-index: 1;
+    position: absolute; */
 }
 
 .time-container {
