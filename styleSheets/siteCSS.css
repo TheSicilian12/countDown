@@ -14,7 +14,7 @@ body {
     z-index: 20;
     position: relative;
     font-family:cursive;
-    /* color: rgba(0, 0, 0, 0.829); */
+    background-color: rgba(102, 51, 153, 0.185);
 }
 
 .flex-cen {
