@@ -10,18 +10,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
     z-index: 20;
     position: relative;
     font-family:cursive;
-    color: rgba(0, 0, 0, 0.829);
+    /* color: rgba(0, 0, 0, 0.829); */
 }
 
 .flex-cen {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 700px;
     align-items: center;
+    height: 700px;
 }
 
 .time-container {
@@ -120,7 +121,14 @@ body {
 
 .imgBorder {
     width: 100%;
-    height: 700px;
+    max-width: 100vw;
+    height: 100vh;
     z-index: 1;
     position: absolute;
+}
+
+.img-credit {
+    z-index: 100;
+    position: absolute;
+    background-color: aquamarine;
 }
