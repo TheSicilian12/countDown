@@ -58,6 +58,7 @@ body {
     display: flex;
     justify-content: right;
     width: calc(1rem + 6vw);
+    margin-right: 0.5rem;
 }
 .unit {
     display: flex;
@@ -68,6 +69,7 @@ body {
     display: flex;
     justify-content: right;
     width: calc(1rem + 6vw);
+    margin-right: 0.5rem;
 }
 .hourUnit {
     display: flex;
@@ -78,6 +80,7 @@ body {
     display: flex;
     justify-content: right;
     width: calc(1rem + 8vw);
+    margin-right: 0.5rem;
 }
 .dayUnit {
     display: flex;
