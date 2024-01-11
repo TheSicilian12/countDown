@@ -41,7 +41,10 @@
 
 .dropdown {
     display: flex;
+    justify-content: space-around;
     position: absolute;
+
+
 
     align-items: center;
     z-index: 1000;
@@ -49,15 +52,16 @@
     border-radius: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
+    /* width: auto; */
+    width: 50%;
     height: 25px;
     transition: left 1s ease-in-out;
 }
 .dropdown a {
     text-decoration: none;
     color: black;
-    margin-right: 20px;
-    margin-left: 20px;
+    /* margin-right: 25px; */
+    /* margin-left: 25px; */
 }
 
 .show {
